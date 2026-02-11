@@ -2,7 +2,7 @@
     public class Day12 {
 
     /*  Why Sorting is needed ?
-    -> Binary Search needs Sortsd array.
+    -> Binary Search needs Sorted array.
     -> Makes data easier to Understand.
     -> Used everywhere (databases,rankings,etc).
 
@@ -42,4 +42,5 @@
 }
 
     
+
 
