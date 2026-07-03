@@ -25,6 +25,8 @@ public class ll {
         }
        
     } 
+
+    //INSERT FIRST()
      public  void insertFirst(int value){
         Node node = new Node(value);
         node.next = head;
@@ -39,6 +41,8 @@ public class ll {
 
 
     }
+
+    //DIsplay Method
     public void display(){
         Node temp = head;
 
@@ -48,6 +52,8 @@ public class ll {
         }
         System.out.println("END..");
     }
+
+    //INSERT LAST()
     public void insertLast(int value){
         if(tail==null){
             insertFirst(value);
@@ -60,6 +66,7 @@ public class ll {
 
     }
 
+    //INSERT NTH NODE()
     public void insertNth(int value,int index){
         if(index == 0){
             insertFirst(value);
@@ -80,6 +87,72 @@ public class ll {
         size++;
     }
 
+    //DELETE FIRST()
+    public int deleteFirst(){
+
+        int val = head.value;
+        head = head.next;
+
+        if(head == null){
+            tail = null;
+        }
+        size--;
+        return val;
+
+    }
+
+    //DELETE LAST()
+    public Node get(int index){
+        Node node  = head;
+        for (int i = 0; i < index; i++){
+            node = node.next;
+        }
+        return node;
+    }
+
+    public int deleteLast(){
+        if(size <= 1){
+           return deleteFirst();
+        }
+        Node secondlast = get(size- 2);
+        int value = tail.value;
+
+        tail = secondlast;
+        tail.next = null;
+
+        return value;
+    }
+
+    //DELETE NTH ()
+    public int deleteNth(int index){
+        if(index == 0){
+            return deleteFirst();
+        }
+        if(index == size -1){
+            return deleteLast();
+        }
+
+        Node prev = get(index -1);
+        int val = prev.next.value;
+
+        prev.next = prev.next.next;
+
+        return val;
+    }
+
+    //FINDING NODE()
+    public Node find(int value){
+        Node node  = head;
+        while(node != null){
+            if(node.value == value){
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
+
     public static void main(String[] args) {
         ll list = new ll();
 
@@ -94,6 +167,18 @@ public class ll {
 
 
             list.display(); 
+
+            System.out.println(list.deleteFirst());
+            list.display();
+
+            System.out.println(list.deleteLast());
+            list.display();
+
+            System.out.println(list.deleteNth(2));
+            list.display();
+
+            list.find(7);
+            list.display();
     }
     
 }
