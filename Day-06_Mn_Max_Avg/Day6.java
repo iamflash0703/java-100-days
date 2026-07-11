@@ -10,7 +10,7 @@ public class Day6 {
 
         
     }
-    public static double FindAvg(int marks[]){
+    public static double FindAvg(int marks{
         int sum = findsum(marks);
         return (double) sum/marks.length;
     
