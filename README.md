@@ -1,6 +1,6 @@
 # Java Practice Journey 🚀
 
-This repository contains my daily Java practice.
+This repository contains my daily Java practise.
 
 ## What I am learning:-
 - Core Java
