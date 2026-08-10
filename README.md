@@ -2,7 +2,7 @@
 
 This repository contains my daily Java practice.
 
-## What I am learning
+## What I am learning:-
 - Core Java
 - Arrays, loops, methods
 - Logic building
