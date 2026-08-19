@@ -10,7 +10,6 @@ public class Day5 {
 
         return sum;
     }
-
     public static int HighestMark(int marks[]){
         int highest = marks[0];
 
